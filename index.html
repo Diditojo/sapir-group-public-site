@@ -631,6 +631,27 @@ html.js .about-art.visible .vl{opacity:1;}
 @media (max-width:899px){
   .nav-links{display:none;}
   .hamburger{display:flex;}
+  /* Keep the close control above the full-screen menu, including after scrolling. */
+  .site-nav:has(.hamburger[aria-expanded="true"]){
+    z-index:calc(var(--z-menu) + 1);
+    --nav-ink:var(--cream);
+    --nav-rule:var(--cream-rule);
+    background:var(--navy);
+  }
+  .site-nav:has(.hamburger[aria-expanded="true"])::after{background:var(--cream-rule);}
+  /* Use one body-text scale when the desktop columns stack. */
+  .hero-sub,.section-intro,.about-content p,.about-content p:first-of-type,
+  .service-desc,.col-item p,.contact-block p{
+    font-family:'Inter',sans-serif;
+    font-size:1rem;
+    line-height:1.75;
+  }
+  .hero-eyebrow,.hero-cta a,.contact-location,.footer-time{
+    font-size:.75rem;
+    letter-spacing:.12em;
+  }
+  .hero-eyebrow{gap:.75em;}
+  .hero-eyebrow::before{width:24px;flex-shrink:0;}
   .hero{padding-top:8rem;}
   .hero-gem,.hero-gem-glint{right:-30%;opacity:.05;}
   .hero-stats{grid-template-columns:repeat(3,1fr);gap:1.5rem;}
@@ -729,7 +750,7 @@ html.js .blur-in.visible{filter:blur(0);}
     <svg class="hero-gem" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="22,32 34,20 66,20 78,32 78,68 66,80 34,80 22,68"></polygon><polygon points="33.76,39.56 40.72,32.6 59.28,32.6 66.24,39.56 66.24,60.44 59.28,67.4 40.72,67.4 33.76,60.44"></polygon><path d="M22 32l11.76 7.56M34 20l6.72 12.6M66 20l-6.72 12.6M78 32l-11.76 7.56M78 68l-11.76-7.56M66 80l-6.72-12.6M34 80l6.72-12.6M22 68l11.76-7.56"></path></svg>
     <div class="wrap">
       <div class="hero-main">
-        <p class="hero-eyebrow r">Global mandates · London based</p>
+        <p class="hero-eyebrow r">Global mandates · Based in London</p>
         <h1 class="hero-headline" id="headline">We help founders and boards scale globally</h1>
         <p class="hero-sub r blur-in d2">We advise founders, boards and investors on growth, capital and governance, grounded in twenty years of operating experience.</p>
         <div class="hero-cta r d3">
@@ -767,7 +788,7 @@ html.js .blur-in.visible{filter:blur(0);}
       <div class="about-content">
         <p class="r">We are a boutique advisory practice built around one idea. Strategy without operating experience is guesswork. Our partners have run brands, sat on boards and closed transactions themselves, in hospitality, real estate and technology. That experience shapes every mandate we take.</p>
         <p class="r d1">We work at board level with founders, chief executives and investors. Mandates range from market entry and fundraising to governance design and restructuring. Clients bring us in when the stakes are high. They need an experienced outside view, applied directly rather than filtered through committees.</p>
-        <p class="r d2">We have built platforms from a single site to multi-country operations. We have raised institutional capital and negotiated management agreements as principals, carrying the outcomes on our own record.</p>
+        <p class="r d2">We have built platforms from a single site to multi-country operations. We have raised institutional capital and negotiated management agreements as principals, taking responsibility for the outcomes.</p>
       </div>
     </div>
   </section>
