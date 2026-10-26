@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-/TrPhQDR4592Axx+qmvmlIaOXicV3Z2+r/pUFvqEeo8='; script-src-attr 'none'; style-src 'sha256-gp3H6dxsdQ4mbq3HHAts8ecV7H22ncp31klVV9tQmTk='; img-src 'self'; connect-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'; frame-src 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Private client download | Sapir Group</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+:root{color-scheme:light;--paper:#eee9dd;--ink:#0d1f3a;--muted:#54607a;--rule:#c9c2ad;--gold:#b08a4a}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}main{width:min(100%,760px);margin:auto;padding:clamp(32px,8vw,72px) 24px}header{border-bottom:1px solid var(--rule);padding-bottom:24px;margin-bottom:48px}header a{font:24px Georgia,serif;text-decoration:none;color:var(--ink)}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;color:var(--muted)}h1{font:normal clamp(36px,7vw,52px)/1.15 Georgia,serif;margin:16px 0 24px}p{max-width:58ch}form{margin-top:32px;border:1px solid var(--rule);padding:clamp(20px,5vw,32px);background:#f6f2e9;border-radius:4px}label{font-weight:600;display:block;margin-bottom:8px}input,button{font:inherit;border-radius:3px;width:100%}input{border:1px solid var(--muted);padding:12px;background:#fff;color:var(--ink)}button{margin-top:16px;padding:13px 20px;border:1px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;font-weight:600}button:disabled{opacity:.65;cursor:wait}input:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:4px}.hint{font-size:14px;color:var(--muted);margin:8px 0 0}#status{min-height:3.3em;margin:20px 0 0}#status.error{color:#8d2020}footer{border-top:1px solid var(--rule);margin-top:48px;padding-top:24px;font-size:14px;color:var(--muted)}[hidden]{display:none}
+</style>
+</head>
+<body>
+<main>
+<header><a href="/">Sapir Group</a></header>
+<p class="eyebrow">Private client download</p>
+<h1>Luch client package</h1>
+<p>Enter the password shared with you to unlock and download the client ZIP package. It includes the documents, spreadsheets and an offline report.</p>
+<form id="unlock-form" autocomplete="off">
+<label for="password">Access password</label>
+<input id="password" name="password" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" required aria-describedby="password-hint status">
+<p class="hint" id="password-hint">Paste the complete password. Your browser unlocks the package locally.</p>
+<button id="unlock-button" type="submit">Unlock and download</button>
+<p id="status" role="status" aria-live="polite">The password is not sent to the website.</p>
+</form>
+<noscript><p>JavaScript is needed to decrypt this download in your browser.</p></noscript>
+<footer>Keep the password and downloaded files private. The download remains available on your device after unlocking.</footer>
+</main>
+<script>
+(() => {
+  'use strict';
+  const form = document.getElementById('unlock-form');
+  const input = document.getElementById('password');
+  const button = document.getElementById('unlock-button');
+  const status = document.getElementById('status');
+  const encoder = new TextEncoder();
+  const MAGIC = encoder.encode('SGLUCH01');
+  const HEADER_LENGTH = 36; // Versioned magic (8), random salt (16), random GCM IV (12).
+  const ITERATIONS = 600000;
+  let busy = false;
+  function message(text, failed = false) {
+    status.textContent = text;
+    status.classList.toggle('error', failed);
+  }
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (busy) return;
+    if (!globalThis.isSecureContext || !globalThis.crypto?.subtle) {
+      message('Please use an up-to-date browser over HTTPS to unlock this package.', true);
+      input.value = '';
+      return;
+    }
+    busy = true;
+    button.disabled = true;
+    form.setAttribute('aria-busy', 'true');
+    let passwordBytes;
+    let plaintext;
+    let objectUrl;
+    try {
+      passwordBytes = encoder.encode(input.value.trim());
+      input.value = '';
+      message('Loading the encrypted package…');
+      // This fixed same-origin request contains no password, token or client plaintext.
+      const response = await fetch('./client-package.enc', {cache: 'no-store', credentials: 'omit', redirect: 'error'});
+      if (!response.ok) throw new Error('Package unavailable');
+      const payload = new Uint8Array(await response.arrayBuffer());
+      if (payload.length < HEADER_LENGTH + 16 || payload.length > 64 * 1024 * 1024 ||
+          !MAGIC.every((byte, index) => payload[index] === byte)) throw new Error('Invalid package');
+      const header = payload.slice(0, HEADER_LENGTH);
+      const salt = header.slice(8, 24);
+      const iv = header.slice(24, 36);
+      message('Unlocking the package…');
+      // Derive a non-extractable key; authenticate the complete fixed-format header.
+      const material = await crypto.subtle.importKey('raw', passwordBytes, 'PBKDF2', false, ['deriveKey']);
+      passwordBytes.fill(0);
+      const key = await crypto.subtle.deriveKey(
+        {name: 'PBKDF2', salt, iterations: ITERATIONS, hash: 'SHA-256'},
+        material, {name: 'AES-GCM', length: 256}, false, ['decrypt']);
+      plaintext = new Uint8Array(await crypto.subtle.decrypt(
+        {name: 'AES-GCM', iv, additionalData: header, tagLength: 128}, key, payload.slice(HEADER_LENGTH)));
+      // No file is exposed until GCM verifies the authentication tag successfully.
+      if (plaintext[0] !== 0x50 || plaintext[1] !== 0x4b) throw new Error('Invalid archive');
+      const blob = new Blob([plaintext], {type: 'application/zip'});
+      objectUrl = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = objectUrl;
+      link.download = 'Luch_Client_Package_2026-10-26.zip';
+      link.hidden = true;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      const completedUrl = objectUrl;
+      setTimeout(() => URL.revokeObjectURL(completedUrl), 60000);
+      objectUrl = undefined;
+      message('Package unlocked. Your ZIP download has started.');
+    } catch {
+      message('Unable to unlock the package. Check the password and try again.', true);
+      input.focus();
+    } finally {
+      passwordBytes?.fill(0);
+      plaintext?.fill(0);
+      if (objectUrl) URL.revokeObjectURL(objectUrl);
+      input.value = '';
+      busy = false;
+      button.disabled = false;
+      form.removeAttribute('aria-busy');
+    }
+  });
+})();
+</script>
+</body>
+</html>

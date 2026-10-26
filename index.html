@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-qOhFsq0QMV2REqNwk5hGH5bZE9SkX6gt6yeyKdYPv+U=' 'sha256-YsyMTljmmXkWt6F0bpv+djL8RY0xcsCTrLtAIkEvPlw='; script-src-attr 'none'; style-src 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; font-src https://fonts.gstatic.com; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sapir Group · Strategic Advisory</title>
+<meta name="description" content="Boutique strategic advisory for founders, boards and investors, spanning growth, capital strategy and governance across hospitality and real estate.">
+<link rel="canonical" href="https://sapir.group/">
+<meta name="theme-color" content="#0d1f3a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500&family=Libre+Caslon+Text&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sapir Group">
+<meta property="og:title" content="Sapir Group · Strategic Advisory">
+<meta property="og:description" content="Strategic advisory for founders and boards, built on direct operating and transaction experience.">
+<meta property="og:url" content="https://sapir.group/">
+<meta property="og:image" content="https://sapir.group/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sapir Group · Strategic Advisory">
+<meta name="twitter:description" content="Strategic advisory for founders and boards, built on direct operating and transaction experience.">
+<meta name="twitter:image" content="https://sapir.group/og-image.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Sapir Group","url":"https://sapir.group/","logo":"https://sapir.group/favicon.svg","image":"https://sapir.group/og-image.png","description":"Boutique strategic advisory for founders, boards and investors, spanning growth, capital strategy and governance across hospitality and real estate.","email":"info@sapir.group","address":{"@type":"PostalAddress","addressLocality":"London","addressCountry":"GB"},"areaServed":"Worldwide"}</script>
+<style>
+:root{
+  --paper:#eee9dd;
+  --paper-2:#e5dfce;
+  --navy:#0d1f3a;
+  --navy-2:#0a1830;
+  --navy-3:#16294a;
+  --ink:#0d1f3a;
+  --ink-2:#16294a;
+  --muted:#5e6a82;
+  --muted-text:#54607a;
+  --cream:#eee9dd;
+  --cream-60:rgba(238,233,221,.62);
+  --cream-40:rgba(238,233,221,.4);
+  --cream-rule:rgba(238,233,221,.16);
+  --rule:#c9c2ad;
+  --rule-strong:rgba(13,31,58,.35);
+  --gold:#b08a4a;
+  --gold-bright:#c9a25e;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --z-nav:100;
+  --z-texture:150;
+  --z-progress:200;
+  --z-menu:300;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-padding-top:5.5rem;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink-2);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  font-size:1rem;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+::selection{background:var(--gold);color:var(--navy);}
+
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth;}
+}
+
+img,svg,canvas{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3{margin:0;font-weight:400;font-family:'EB Garamond',Georgia,serif;color:var(--ink);text-wrap:balance;}
+p{margin:0;}
+
+.wrap{
+  max-width:1140px;
+  margin-inline:auto;
+  padding-inline:clamp(1.25rem,4vw,3rem);
+}
+section{padding-block:clamp(4.5rem,9vw,7.5rem);}
+
+/* Skip link */
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  background:var(--ink);
+  color:var(--paper);
+  padding:.9rem 1.4rem;
+  font-family:'Inter',sans-serif;
+  font-size:.85rem;
+  letter-spacing:.06em;
+  z-index:600;
+  border-radius:2px;
+}
+.skip-link:focus{left:1rem;top:1rem;}
+
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+
+/* Paper grain */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:var(--z-texture);
+  opacity:.05;
+  mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:240px 240px;
+}
+
+/* Scroll progress */
+.progress{
+  position:fixed;top:0;left:0;height:2px;width:0;
+  background:linear-gradient(90deg,var(--gold),var(--gold-bright));
+  z-index:var(--z-progress);
+  pointer-events:none;
+}
+
+/* ============ NAV ============ */
+.site-nav{
+  position:fixed;top:0;left:0;right:0;
+  z-index:var(--z-nav);
+  --nav-ink:var(--cream);
+  --nav-dim:var(--cream-60);
+  --nav-rule:var(--cream-rule);
+  background:transparent;
+  transition:background .4s ease;
+}
+.site-nav::after{
+  content:"";
+  position:absolute;left:0;right:0;bottom:0;height:1px;
+  background:transparent;
+  transition:background .4s ease;
+}
+.site-nav.scrolled{
+  --nav-ink:var(--ink);
+  --nav-dim:var(--muted);
+  --nav-rule:var(--rule-strong);
+  background:rgba(238,233,221,.92);
+  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(14px);
+}
+.site-nav.scrolled::after{background:var(--rule);}
+.nav-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-block:1.15rem;
+}
+.nav-brand{display:flex;align-items:center;gap:.95rem;color:var(--nav-ink);transition:color .4s ease;}
+.nav-brand .gem{width:32px;height:32px;color:var(--nav-ink);flex-shrink:0;transition:color .4s ease;}
+.brand-rule{width:1px;height:32px;background:var(--nav-rule);transition:background .4s ease;}
+.brand-stack{display:flex;flex-direction:column;gap:4px;line-height:1;}
+.brand-stack .wordmark{
+  font-family:'Libre Caslon Text',Georgia,serif;
+  font-weight:400;
+  font-size:1.2rem;
+  letter-spacing:.01em;
+  color:var(--nav-ink);
+  transition:color .4s ease;
+}
+.brand-sub{
+  font-family:var(--mono);
+  font-size:.56rem;font-weight:500;
+  letter-spacing:.3em;text-transform:uppercase;
+  color:var(--nav-ink);
+  opacity:.6;
+  transition:color .4s ease;
+}
+.nav-links{display:flex;align-items:center;gap:2.25rem;list-style:none;margin:0;padding:0;}
+.nav-links a{
+  position:relative;
+  font-family:var(--mono);
+  font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--nav-dim);
+  padding-bottom:4px;
+  transition:color .25s ease;
+}
+.nav-links a::after{
+  content:"";
+  position:absolute;left:0;bottom:0;height:1px;width:100%;
+  background:var(--gold);
+  transform:scaleX(0);
+  transform-origin:right;
+  transition:transform .35s var(--ease);
+}
+.nav-links a:hover{color:var(--nav-ink);}
+.nav-links a:hover::after,
+.nav-links a.active::after{transform:scaleX(1);transform-origin:left;}
+.nav-links a.active{color:var(--nav-ink);}
+
+.hamburger{
+  display:none;
+  flex-direction:column;justify-content:center;align-items:center;
+  gap:6px;width:44px;height:44px;
+  background:none;border:none;cursor:pointer;padding:0;
+  z-index:calc(var(--z-menu) + 10);
+  position:relative;
+}
+.hamburger span{
+  display:block;width:22px;height:1px;
+  background:var(--nav-ink);
+  transition:transform .3s ease,opacity .3s ease,background .4s ease;
+}
+.hamburger[aria-expanded="true"] span{background:var(--cream);}
+.hamburger[aria-expanded="true"] span:first-child{transform:translateY(3.5px) rotate(45deg);}
+.hamburger[aria-expanded="true"] span:last-child{transform:translateY(-3.5px) rotate(-45deg);}
+
+.mobile-overlay{
+  position:fixed;inset:0;
+  background:var(--navy);
+  z-index:var(--z-menu);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;
+  transition:opacity .4s ease,visibility 0s linear .4s;
+}
+.mobile-overlay.open{
+  opacity:1;visibility:visible;
+  transition:opacity .4s ease,visibility 0s linear 0s;
+}
+.mobile-overlay ul{
+  list-style:none;margin:0;padding:0;
+  display:flex;flex-direction:column;align-items:center;gap:2rem;
+  text-align:center;
+}
+.mobile-overlay a{
+  font-family:'EB Garamond',Georgia,serif;
+  font-size:1.6rem;
+  color:var(--cream);
+  opacity:0;transform:translateY(10px);
+  transition:opacity .5s ease,transform .5s ease;
+}
+.mobile-overlay a:hover{color:var(--gold-bright);}
+.mobile-overlay.open a{opacity:1;transform:translateY(0);}
+.mobile-overlay.open a:nth-child(1){transition-delay:.08s;}
+.mobile-overlay.open a:nth-child(2){transition-delay:.16s;}
+.mobile-overlay.open a:nth-child(3){transition-delay:.24s;}
+.mobile-overlay.open a:nth-child(4){transition-delay:.32s;}
+.mobile-overlay.open a:nth-child(5){transition-delay:.4s;}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;
+  padding-top:9.5rem;
+  padding-bottom:0;
+  background:
+    radial-gradient(120% 90% at 78% -10%, var(--navy-3) 0%, var(--navy) 55%, var(--navy-2) 100%);
+  color:var(--cream);
+  overflow:hidden;
+}
+.hero-art{
+  position:absolute;inset:0;
+  width:100%;height:100%;
+  object-fit:cover;
+  opacity:.85;
+  pointer-events:none;
+}
+.hero::before{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(100deg, rgba(10,24,48,.88) 0%, rgba(10,24,48,.55) 48%, rgba(10,24,48,.15) 100%);
+  pointer-events:none;
+  z-index:1;
+}
+.hero .wrap, .hero-stats{position:relative;z-index:2;}
+.hero .hero-gem{z-index:1;}
+.hero-gem{
+  position:absolute;
+  top:50%;right:-6%;
+  width:clamp(340px,44vw,640px);
+  height:auto;
+  transform:translateY(-58%) rotate(8deg);
+  color:var(--cream);
+  opacity:.07;
+  pointer-events:none;
+}
+.hero-gem-glint{
+  position:absolute;
+  top:50%;right:-6%;
+  width:clamp(340px,44vw,640px);
+  transform:translateY(-58%) rotate(8deg);
+  color:var(--gold-bright);
+  opacity:.12;
+  pointer-events:none;
+}
+.hero .wrap{position:relative;}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:.9em;
+  font-family:var(--mono);
+  font-weight:400;font-size:.68rem;
+  letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold-bright);
+  margin-bottom:1.75rem;
+}
+.hero-eyebrow::before{
+  content:"";
+  width:36px;height:1px;
+  background:var(--gold);
+}
+h1.hero-headline{
+  font-size:clamp(2.9rem,6.4vw,5.6rem);
+  line-height:1.04;
+  letter-spacing:-.012em;
+  max-width:20ch;
+  color:var(--cream);
+}
+.hero-headline .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.12em;margin-bottom:-.12em;}
+.hero-headline .w > span{display:inline-block;transform:translateY(115%);animation:riseUp .9s var(--ease) forwards;}
+@keyframes riseUp{to{transform:translateY(0);}}
+.hero-sub{
+  font-family:'Inter',sans-serif;
+  font-size:1.05rem;line-height:1.8;
+  color:var(--cream-60);
+  max-width:32rem;
+  margin-top:2rem;
+}
+.hero-cta{display:inline-flex;margin-top:2.75rem;}
+.hero-cta a{
+  display:inline-flex;align-items:center;gap:.8em;
+  font-family:var(--mono);
+  font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--navy);
+  background:var(--gold);
+  padding:1.05rem 1.6rem;
+  transition:background .3s ease,transform .25s var(--ease),box-shadow .3s ease;
+}
+.hero-cta a:hover{
+  background:var(--gold-bright);
+  transform:translateY(-2px);
+  box-shadow:0 12px 30px -12px rgba(0,0,0,.55);
+}
+.hero-cta a:hover .arrow{transform:translateX(4px);}
+.arrow{display:inline-block;transition:transform .3s ease;}
+
+.hero-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2rem;
+  padding-block:2.5rem 3rem;
+  margin-top:4rem;
+  border-top:1px solid var(--cream-rule);
+}
+.stat-block{padding-top:0;}
+.stat-number{
+  font-family:'EB Garamond',Georgia,serif;
+  font-size:2.7rem;
+  color:var(--gold-bright);
+  line-height:1.15;
+  font-variant-numeric:tabular-nums;
+}
+.stat-label{
+  font-family:'Inter',sans-serif;
+  font-size:.82rem;
+  color:var(--cream-60);
+  line-height:1.55;
+  margin-top:.4rem;
+  max-width:24ch;
+}
+
+/* ============ SECTION HEADERS ============ */
+.section-head{margin-bottom:3.25rem;}
+.section-head h2{font-size:clamp(2rem,3.4vw,3rem);line-height:1.12;}
+.section-head h2::after{
+  content:"";
+  display:block;
+  width:64px;height:1px;
+  background:var(--gold);
+  margin-top:1.3rem;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .9s var(--ease) .15s;
+}
+.section-head h2.visible::after{transform:scaleX(1);}
+.section-intro{
+  font-family:'Inter',sans-serif;
+  font-size:1.02rem;
+  color:var(--muted-text);
+  max-width:38rem;
+  margin-top:1.5rem;
+}
+
+/* ============ ABOUT ============ */
+.about-grid{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:2rem;
+}
+.about-heading{grid-column:1 / 6;}
+.about-heading h2{
+  font-size:clamp(2rem,3.4vw,3rem);
+  line-height:1.12;
+  position:sticky;
+  top:7rem;
+  max-width:14ch;
+}
+.about-heading h2::after{
+  content:"";
+  display:block;
+  width:64px;height:1px;
+  background:var(--gold);
+  margin-top:1.3rem;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .9s var(--ease) .15s;
+}
+.about-heading h2.visible::after{transform:scaleX(1);}
+.about-content{grid-column:7 / 13;}
+.about-art{
+  margin-top:3rem;
+  max-width:300px;
+}
+.about-art img,.about-art svg{width:100%;height:auto;display:block;}
+.about-content p{
+  color:var(--ink-2);
+  margin-bottom:1.4rem;
+  max-width:42rem;
+}
+.about-content p:first-of-type{
+  font-family:'EB Garamond',Georgia,serif;
+  font-size:1.35rem;
+  line-height:1.6;
+  color:var(--ink);
+}
+.about-content p:last-of-type{margin-bottom:0;}
+
+/* ============ SERVICES ============ */
+#services{background:var(--paper-2);}
+.service-row{
+  position:relative;
+  display:grid;
+  grid-template-columns:1fr 4fr 6fr;
+  gap:2rem;
+  padding-block:2.4rem;
+  border-top:1px solid var(--rule);
+  transition:background .35s ease,padding-inline .35s ease,margin-inline .35s ease,border-color .35s ease;
+}
+.service-row:last-child{border-bottom:1px solid var(--rule);}
+.service-row::after{
+  content:attr(data-num);
+  position:absolute;
+  right:1.25rem;top:50%;
+  font-family:'EB Garamond',Georgia,serif;
+  font-size:6.5rem;
+  line-height:1;
+  color:var(--gold-bright);
+  opacity:0;
+  transform:translateY(-30%);
+  transition:opacity .45s ease,transform .45s var(--ease);
+  pointer-events:none;
+}
+.service-num{
+  font-family:var(--mono);
+  font-size:.85rem;
+  color:var(--gold);
+  transition:color .35s ease;
+}
+.service-title{
+  font-family:'EB Garamond',Georgia,serif;
+  font-weight:500;
+  font-size:1.45rem;
+  color:var(--ink);
+  transition:color .35s ease;
+}
+.service-desc{
+  font-family:'Inter',sans-serif;
+  font-size:.95rem;
+  color:var(--ink-2);
+  line-height:1.75;
+  max-width:56ch;
+  transition:color .35s ease;
+}
+@media (hover:hover) and (pointer:fine){
+  .service-row:hover{
+    background:var(--navy);
+    border-color:var(--navy);
+    padding-inline:1.75rem;
+    margin-inline:-1.75rem;
+  }
+  .service-row:hover + .service-row{border-top-color:var(--navy);}
+  .service-row:hover .service-num{color:var(--gold-bright);}
+  .service-row:hover .service-title{color:var(--cream);}
+  .service-row:hover .service-desc{color:var(--cream-60);}
+  .service-row:hover::after{opacity:.14;transform:translateY(-50%);}
+}
+
+/* ============ SECTORS & APPROACH ============ */
+.col-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:3rem;
+}
+.col-item{padding-top:1.5rem;}
+.col-plate{
+  display:block;width:100%;height:auto;
+  margin-bottom:1.6rem;
+  transition:transform .5s var(--ease);
+}
+.col-item:hover .col-plate{transform:translateY(-4px);}
+.col-item.ruled{border-top:1px solid var(--rule);position:relative;}
+.col-item.ruled::before{
+  content:"";
+  position:absolute;top:-1px;left:0;
+  width:48px;height:1px;
+  background:var(--gold);
+}
+.col-item h3{
+  font-weight:500;
+  font-size:1.3rem;
+  color:var(--ink);
+  margin-bottom:.9rem;
+}
+.col-item p{
+  font-family:'Inter',sans-serif;
+  font-size:.92rem;
+  color:var(--ink-2);
+  line-height:1.8;
+}
+.col-item.on-paper{padding-top:0;}
+.col-item.on-paper .rule32{
+  width:32px;height:1px;
+  background:var(--gold);
+  margin:0 0 1.5rem;
+  border:none;
+}
+#sectors,#approach{border-top:1px solid var(--rule);}
+
+/* ============ CONTACT ============ */
+#contact{
+  background:
+    radial-gradient(110% 120% at 20% 115%, var(--navy-3) 0%, var(--navy) 60%, var(--navy-2) 100%);
+  color:var(--cream);
+  position:relative;
+  overflow:hidden;
+}
+#contact .section-head h2{color:var(--cream);}
+.contact-gem{
+  position:absolute;
+  bottom:-14%;right:-4%;
+  width:clamp(260px,30vw,440px);
+  color:var(--cream);
+  opacity:.06;
+  transform:rotate(-6deg);
+  pointer-events:none;
+}
+.contact-block{position:relative;}
+.contact-block p{
+  font-family:'Inter',sans-serif;
+  font-size:1.02rem;
+  color:var(--cream-60);
+  max-width:34rem;
+}
+.contact-email{
+  display:inline-block;
+  margin-top:3rem;
+  font-family:'EB Garamond',Georgia,serif;
+  font-size:clamp(1.6rem,4vw,2.6rem);
+  color:var(--gold-bright);
+  border-bottom:1px solid rgba(201,162,94,.4);
+  padding-bottom:6px;
+  transition:border-color .3s ease,letter-spacing .4s var(--ease),color .3s ease;
+}
+.contact-email:hover{border-color:var(--gold-bright);letter-spacing:.02em;color:var(--cream);}
+.contact-location{
+  margin-top:2.5rem;
+  font-family:var(--mono);
+  font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--cream-40);
+}
+
+/* ============ FOOTER ============ */
+.site-footer{
+  border-top:1px solid var(--cream-rule);
+  background:var(--navy-2);
+  color:var(--cream);
+  padding-block:2.5rem;
+}
+.footer-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1.5rem;flex-wrap:wrap;
+}
+.footer-brand{display:flex;align-items:center;gap:.55rem;color:var(--cream);}
+.footer-brand .gem{width:17px;height:17px;color:var(--gold-bright);}
+.footer-brand span{font-family:'EB Garamond',Georgia,serif;font-size:.95rem;}
+.footer-time{
+  font-family:var(--mono);
+  font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--cream-40);
+  font-variant-numeric:tabular-nums;
+}
+.footer-line{
+  font-family:'Inter',sans-serif;
+  font-size:.75rem;
+  color:var(--cream-40);
+}
+
+
+/* ============ PLATE ANIMATIONS ============ */
+svg.col-plate,.about-svg{display:block;width:100%;height:auto;}
+html.js .about-art .fl{opacity:0;animation:none;}
+html.js .about-art.visible .fl{animation:floorLoop 7.5s var(--ease) infinite backwards;}
+@keyframes floorLoop{
+  0%{opacity:0;transform:translateY(56px);}
+  6%{opacity:1;transform:translateY(0);}
+  72%{opacity:1;transform:translateY(0);}
+  82%{opacity:0;transform:translateY(-44px);}
+  100%{opacity:0;transform:translateY(56px);}
+}
+html.js .about-art .vl{opacity:0;transition:opacity .9s ease .6s;}
+html.js .about-art.visible .vl{opacity:1;}
+.arc{stroke-dasharray:480 480;}
+.hatch{animation:hatchSlide 1.1s linear infinite;}
+@media (hover:hover){
+  .col-item:hover .arc{animation:drawArc 1.1s var(--ease);}
+}
+@keyframes drawArc{from{stroke-dashoffset:480;}to{stroke-dashoffset:0;}}
+@keyframes hatchSlide{from{transform:translateX(0);}to{transform:translateX(13px);}}
+.rosette-g{transform-origin:50% 50%;transform-box:view-box;animation:rosetteSpin 16s linear infinite;}
+@keyframes rosetteSpin{to{transform:rotate(360deg);}}
+.blk{stroke-dasharray:1;animation:blkDraw 7s var(--ease) infinite;}
+@keyframes blkDraw{
+  0%{stroke-dashoffset:1;opacity:1;}
+  45%{stroke-dashoffset:0;opacity:1;}
+  80%{stroke-dashoffset:0;opacity:1;}
+  90%{stroke-dashoffset:0;opacity:0;}
+  100%{stroke-dashoffset:1;opacity:0;}
+}
+
+/* ============ MOBILE ============ */
+@media (max-width:899px){
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  .hero{padding-top:8rem;}
+  .hero-gem,.hero-gem-glint{right:-30%;opacity:.05;}
+  .hero-stats{grid-template-columns:repeat(3,1fr);gap:1.5rem;}
+  .about-grid{grid-template-columns:1fr;}
+  .about-heading{grid-column:1 / -1;margin-bottom:2rem;}
+  .about-heading h2{position:static;max-width:none;}
+  .about-content{grid-column:1 / -1;}
+  .service-row{grid-template-columns:1fr;gap:.6rem;}
+  .service-row::after{display:none;}
+  .col-grid{grid-template-columns:1fr;gap:2.75rem;}
+  .footer-inner{justify-content:center;text-align:center;flex-direction:column;gap:.9rem;}
+}
+@media (max-width:479px){
+  .hero-stats{grid-template-columns:1fr;gap:1.75rem;}
+  .stat-label{max-width:none;}
+}
+
+/* ============ REVEAL ============ */
+html.js .r{
+  opacity:0;
+  transform:translateY(14px);
+  transition:opacity .7s var(--ease),transform .7s var(--ease);
+}
+html.js .r.visible{opacity:1;transform:translateY(0);}
+html.js .blur-in{filter:blur(7px);transition:opacity .7s var(--ease),transform .7s var(--ease),filter .8s ease;}
+html.js .blur-in.visible{filter:blur(0);}
+.d1{transition-delay:.08s;}
+.d2{transition-delay:.16s;}
+.d3{transition-delay:.24s;}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    transition:none !important;
+    animation:none !important;
+  }
+  html.js .r{opacity:1 !important;transform:none !important;}
+  html.js .blur-in{filter:none !important;}
+  .mobile-overlay a{opacity:1 !important;transform:none !important;}
+  .hero-headline .w > span{transform:none !important;}
+  .section-head h2::after,.about-heading h2::after{transform:scaleX(1) !important;}
+  html.js .about-art .fl,html.js .about-art .vl{opacity:1 !important;transform:none !important;}
+}
+</style>
+</head>
+<body>
+
+
+
+<a href="#main" class="skip-link">Skip to content</a>
+
+<div class="progress" id="progressBar" aria-hidden="true"></div>
+
+<script>document.documentElement.classList.add("js")</script>
+
+<header class="site-nav" id="siteNav">
+  <div class="wrap nav-inner">
+    <a href="#main" class="nav-brand" aria-label="Sapir Group, back to top">
+      <svg class="gem" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="22,32 34,20 66,20 78,32 78,68 66,80 34,80 22,68"></polygon><polygon points="33.76,39.56 40.72,32.6 59.28,32.6 66.24,39.56 66.24,60.44 59.28,67.4 40.72,67.4 33.76,60.44"></polygon><path d="M22 32l11.76 7.56M34 20l6.72 12.6M66 20l-6.72 12.6M78 32l-11.76 7.56M78 68l-11.76-7.56M66 80l-6.72-12.6M34 80l6.72-12.6M22 68l11.76-7.56"></path></svg>
+      <span class="brand-rule" aria-hidden="true"></span>
+      <span class="brand-stack">
+        <span class="wordmark">Sapir Group</span>
+        <span class="brand-sub">Strategic Advisory</span>
+      </span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Advisory</a></li>
+        <li><a href="#sectors">Sectors</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-overlay" id="mobileMenu">
+  <nav aria-label="Mobile">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Advisory</a></li>
+      <li><a href="#sectors">Sectors</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<main id="main">
+
+  <section class="hero">
+    <svg class="hero-gem" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="22,32 34,20 66,20 78,32 78,68 66,80 34,80 22,68"></polygon><polygon points="33.76,39.56 40.72,32.6 59.28,32.6 66.24,39.56 66.24,60.44 59.28,67.4 40.72,67.4 33.76,60.44"></polygon><path d="M22 32l11.76 7.56M34 20l6.72 12.6M66 20l-6.72 12.6M78 32l-11.76 7.56M78 68l-11.76-7.56M66 80l-6.72-12.6M34 80l6.72-12.6M22 68l11.76-7.56"></path></svg>
+    <div class="wrap">
+      <div class="hero-main">
+        <p class="hero-eyebrow r">Global mandates · London based</p>
+        <h1 class="hero-headline" id="headline">We help founders and boards scale globally</h1>
+        <p class="hero-sub r blur-in d2">We advise founders, boards and investors on growth, capital and governance, grounded in twenty years of operating experience.</p>
+        <div class="hero-cta r d3">
+          <a href="#contact" id="ctaBtn">
+            <span>Start a conversation</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap hero-stats">
+      <div class="stat-block r d1">
+        <div class="stat-number" data-count="20" data-suffix="+">20+</div>
+        <div class="stat-label">Years in executive roles across strategy, finance and operations</div>
+      </div>
+      <div class="stat-block r d2">
+        <div class="stat-number" data-count="750" data-prefix="$" data-suffix="M+">$750M+</div>
+        <div class="stat-label">Capital raised across equity and debt transactions</div>
+      </div>
+      <div class="stat-block r d3">
+        <div class="stat-number" data-count="15" data-suffix="+">15+</div>
+        <div class="stat-label">Markets entered across hospitality, real estate and technology</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="about-heading">
+        <h2 class="r">Advisers who have built what they advise on</h2>
+        <figure class="about-art r d2" style="margin-left:0;">
+          <svg class="about-svg" viewBox="0 0 1200 1500" role="img" aria-label="Line drawing of a structure assembling floor by floor"><defs><linearGradient id="gA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16294a"></stop><stop offset=".55" stop-color="#0d1f3a"></stop><stop offset="1" stop-color="#0a1830"></stop></linearGradient></defs><rect width="100%" height="100%" fill="url(#gA)"></rect><g class="vl" stroke="rgba(238,233,221,0.2)" stroke-width="1.2"><line x1="270" y1="1290" x2="270" y2="302"></line><line x1="600" y1="1172" x2="600" y2="184"></line><line x1="930" y1="1290" x2="930" y2="302"></line><line x1="600" y1="1408" x2="600" y2="420"></line></g><polygon class="fl" style="animation-delay:0.00s" points="270,1290 600,1172 930,1290 600,1408" fill="none" stroke="rgba(238,233,221,0.120)" stroke-width="1.2" stroke-linejoin="round"></polygon><polygon class="fl" style="animation-delay:0.24s" points="270,1214 600,1096 930,1214 600,1332" fill="none" stroke="rgba(238,233,221,0.156)" stroke-width="1.2" stroke-linejoin="round"></polygon><polygon class="fl" style="animation-delay:0.48s" points="270,1138 600,1020 930,1138 600,1256" fill="none" stroke="rgba(238,233,221,0.191)" stroke-width="1.2" stroke-linejoin="round"></polygon><polygon class="fl" style="animation-delay:0.72s" points="270,1062 600,944 930,1062 600,1180" fill="none" stroke="rgba(238,233,221,0.227)" stroke-width="1.2" stroke-linejoin="round"></polygon><polygon class="fl" style="animation-delay:0.96s" points="270,986 600,868 930,986 600,1104" fill="none" stroke="rgba(238,233,221,0.263)" stroke-width="1.2" stroke-linejoin="round"></polygon><polygon class="fl" style="animation-delay:1.20s" points="270,910 600,792 930,910 600,1028" fill="none" stroke="rgba(238,233,221,0.299)" stroke-width="1.2" stroke-linejoin="round"></polygon><polygon class="fl" style="animation-delay:1.44s" points="270,834 600,716 930,834 600,952" fill="none" stroke="rgba(238,233,221,0.334)" stroke-width="1.2" stroke-linejoin="round"></polygon><polygon class="fl" style="animation-delay:1.68s" points="270,758 600,640 930,758 600,876" fill="none" stroke="rgba(238,233,221,0.370)" stroke-width="1.2" stroke-linejoin="round"></polygon><polygon class="fl" style="animation-delay:1.92s" points="270,682 600,564 930,682 600,800" fill="none" stroke="rgba(238,233,221,0.406)" stroke-width="1.2" stroke-linejoin="round"></polygon><polygon class="fl" style="animation-delay:2.16s" points="270,606 600,488 930,606 600,724" fill="none" stroke="rgba(238,233,221,0.441)" stroke-width="1.2" stroke-linejoin="round"></polygon><polygon class="fl" style="animation-delay:2.40s" points="270,530 600,412 930,530 600,648" fill="none" stroke="rgba(201,162,94,0.8)" stroke-width="1.8" stroke-linejoin="round"></polygon><polygon class="fl" style="animation-delay:2.64s" points="270,454 600,336 930,454 600,572" fill="none" stroke="rgba(238,233,221,0.513)" stroke-width="1.2" stroke-linejoin="round"></polygon><polygon class="fl" style="animation-delay:2.88s" points="270,378 600,260 930,378 600,496" fill="none" stroke="rgba(238,233,221,0.549)" stroke-width="1.2" stroke-linejoin="round"></polygon><polygon class="fl" style="animation-delay:3.12s" points="270,302 600,184 930,302 600,420" fill="none" stroke="rgba(238,233,221,0.584)" stroke-width="1.2" stroke-linejoin="round"></polygon></svg>
+        </figure>
+      </div>
+      <div class="about-content">
+        <p class="r">We are a boutique advisory practice built around one idea. Strategy without operating experience is guesswork. Our partners have run brands, sat on boards and closed transactions themselves, in hospitality, real estate and technology. That experience shapes every mandate we take.</p>
+        <p class="r d1">We work at board level with founders, chief executives and investors. Mandates range from market entry and fundraising to governance design and restructuring. Clients bring us in when the stakes are high. They need an experienced outside view, applied directly rather than filtered through committees.</p>
+        <p class="r d2">We have built platforms from a single site to multi-country operations. We have raised institutional capital and negotiated management agreements as principals, carrying the outcomes on our own record.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="r">Advisory services</h2>
+        <p class="section-intro r d1">We advise on the decisions that determine whether a business scales well or simply scales.</p>
+      </div>
+
+      <div class="service-row r" data-num="01">
+        <div class="service-num">01</div>
+        <div class="service-title">Strategic Growth &amp; Global Expansion</div>
+        <div class="service-desc">We design market entry strategies and sequence international expansion for founder-led brands. Work includes site selection, partner identification and go-to-market planning. Our experience spans direct market entries across four continents, from first site to full regional footprint.</div>
+      </div>
+      <div class="service-row r" data-num="02">
+        <div class="service-num">02</div>
+        <div class="service-title">Capital Strategy &amp; Transactions</div>
+        <div class="service-desc">We prepare businesses for fundraising and lead transaction processes from start to close. This covers investor targeting, data room preparation, term negotiation and sell-side mandates. Our experience spans over $750 million in equity and debt transactions across multiple sectors.</div>
+      </div>
+      <div class="service-row r" data-num="03">
+        <div class="service-num">03</div>
+        <div class="service-title">Founder Partnership &amp; Governance</div>
+        <div class="service-desc">We work alongside founders as they professionalise governance ahead of institutional capital or new ownership. This includes board construction, reporting structures and decision rights. Businesses move from founder-run to institutionally owned without losing the instincts that built them.</div>
+      </div>
+      <div class="service-row r" data-num="04">
+        <div class="service-num">04</div>
+        <div class="service-title">Operational Transformation</div>
+        <div class="service-desc">We restructure operations to support scale once a business has outgrown its early processes. This covers management agreements, leadership hiring, cost structures and reporting systems. We step in at the point where informal habits need formal systems.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sectors">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="r">Where we operate</h2>
+        <p class="section-intro r d1">We concentrate where operating experience gives us an edge.</p>
+      </div>
+
+      <div class="col-grid">
+        <div class="col-item ruled r">
+          <svg class="col-plate" viewBox="0 0 1200 900" role="img" aria-label="Line drawing of a colonnade of arches"><defs><linearGradient id="gB" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16294a"></stop><stop offset=".55" stop-color="#0d1f3a"></stop><stop offset="1" stop-color="#0a1830"></stop></linearGradient></defs><rect width="100%" height="100%" fill="url(#gB)"></rect><defs><clipPath id="archClip0"><path d="M 252 368 A 98 98 0 0 1 448 368 Z"></path></clipPath><clipPath id="archClip1"><path d="M 502 368 A 98 98 0 0 1 698 368 Z"></path></clipPath><clipPath id="archClip2"><path d="M 752 368 A 98 98 0 0 1 948 368 Z"></path></clipPath></defs><g fill="none" stroke="rgba(238,233,221,0.35)" stroke-width="1.4"><rect x="225" y="368" width="54" height="370"></rect><rect x="421" y="368" width="54" height="370"></rect><path class="arc" d="M 252 368 A 98 98 0 0 1 448 368"></path><path class="arc" d="M 198 368 A 152 152 0 0 1 502 368"></path></g><g clip-path="url(#archClip0)"><g class="hatch" stroke="rgba(238,233,221,0.12)" stroke-width="1"><line x1="114" y1="162" x2="194" y2="368"></line><line x1="127" y1="162" x2="207" y2="368"></line><line x1="140" y1="162" x2="220" y2="368"></line><line x1="153" y1="162" x2="233" y2="368"></line><line x1="166" y1="162" x2="246" y2="368"></line><line x1="179" y1="162" x2="259" y2="368"></line><line x1="192" y1="162" x2="272" y2="368"></line><line x1="205" y1="162" x2="285" y2="368"></line><line x1="218" y1="162" x2="298" y2="368"></line><line x1="231" y1="162" x2="311" y2="368"></line><line x1="244" y1="162" x2="324" y2="368"></line><line x1="257" y1="162" x2="337" y2="368"></line><line x1="270" y1="162" x2="350" y2="368"></line><line x1="283" y1="162" x2="363" y2="368"></line><line x1="296" y1="162" x2="376" y2="368"></line><line x1="309" y1="162" x2="389" y2="368"></line><line x1="322" y1="162" x2="402" y2="368"></line><line x1="335" y1="162" x2="415" y2="368"></line><line x1="348" y1="162" x2="428" y2="368"></line><line x1="361" y1="162" x2="441" y2="368"></line><line x1="374" y1="162" x2="454" y2="368"></line><line x1="387" y1="162" x2="467" y2="368"></line><line x1="400" y1="162" x2="480" y2="368"></line><line x1="413" y1="162" x2="493" y2="368"></line><line x1="426" y1="162" x2="506" y2="368"></line><line x1="439" y1="162" x2="519" y2="368"></line><line x1="452" y1="162" x2="532" y2="368"></line><line x1="465" y1="162" x2="545" y2="368"></line><line x1="478" y1="162" x2="558" y2="368"></line><line x1="491" y1="162" x2="571" y2="368"></line><line x1="504" y1="162" x2="584" y2="368"></line><line x1="517" y1="162" x2="597" y2="368"></line><line x1="530" y1="162" x2="610" y2="368"></line><line x1="543" y1="162" x2="623" y2="368"></line><line x1="556" y1="162" x2="636" y2="368"></line><line x1="569" y1="162" x2="649" y2="368"></line></g></g><g fill="none" stroke="rgba(201,162,94,0.85)" stroke-width="1.4"><rect x="475" y="368" width="54" height="370"></rect><rect x="671" y="368" width="54" height="370"></rect><path class="arc" d="M 502 368 A 98 98 0 0 1 698 368"></path><path class="arc" d="M 448 368 A 152 152 0 0 1 752 368"></path></g><g clip-path="url(#archClip1)"><g class="hatch" stroke="rgba(201,162,94,0.3)" stroke-width="1"><line x1="364" y1="162" x2="444" y2="368"></line><line x1="377" y1="162" x2="457" y2="368"></line><line x1="390" y1="162" x2="470" y2="368"></line><line x1="403" y1="162" x2="483" y2="368"></line><line x1="416" y1="162" x2="496" y2="368"></line><line x1="429" y1="162" x2="509" y2="368"></line><line x1="442" y1="162" x2="522" y2="368"></line><line x1="455" y1="162" x2="535" y2="368"></line><line x1="468" y1="162" x2="548" y2="368"></line><line x1="481" y1="162" x2="561" y2="368"></line><line x1="494" y1="162" x2="574" y2="368"></line><line x1="507" y1="162" x2="587" y2="368"></line><line x1="520" y1="162" x2="600" y2="368"></line><line x1="533" y1="162" x2="613" y2="368"></line><line x1="546" y1="162" x2="626" y2="368"></line><line x1="559" y1="162" x2="639" y2="368"></line><line x1="572" y1="162" x2="652" y2="368"></line><line x1="585" y1="162" x2="665" y2="368"></line><line x1="598" y1="162" x2="678" y2="368"></line><line x1="611" y1="162" x2="691" y2="368"></line><line x1="624" y1="162" x2="704" y2="368"></line><line x1="637" y1="162" x2="717" y2="368"></line><line x1="650" y1="162" x2="730" y2="368"></line><line x1="663" y1="162" x2="743" y2="368"></line><line x1="676" y1="162" x2="756" y2="368"></line><line x1="689" y1="162" x2="769" y2="368"></line><line x1="702" y1="162" x2="782" y2="368"></line><line x1="715" y1="162" x2="795" y2="368"></line><line x1="728" y1="162" x2="808" y2="368"></line><line x1="741" y1="162" x2="821" y2="368"></line><line x1="754" y1="162" x2="834" y2="368"></line><line x1="767" y1="162" x2="847" y2="368"></line><line x1="780" y1="162" x2="860" y2="368"></line><line x1="793" y1="162" x2="873" y2="368"></line><line x1="806" y1="162" x2="886" y2="368"></line><line x1="819" y1="162" x2="899" y2="368"></line></g></g><g fill="none" stroke="rgba(238,233,221,0.35)" stroke-width="1.4"><rect x="725" y="368" width="54" height="370"></rect><rect x="921" y="368" width="54" height="370"></rect><path class="arc" d="M 752 368 A 98 98 0 0 1 948 368"></path><path class="arc" d="M 698 368 A 152 152 0 0 1 1002 368"></path></g><g clip-path="url(#archClip2)"><g class="hatch" stroke="rgba(238,233,221,0.12)" stroke-width="1"><line x1="614" y1="162" x2="694" y2="368"></line><line x1="627" y1="162" x2="707" y2="368"></line><line x1="640" y1="162" x2="720" y2="368"></line><line x1="653" y1="162" x2="733" y2="368"></line><line x1="666" y1="162" x2="746" y2="368"></line><line x1="679" y1="162" x2="759" y2="368"></line><line x1="692" y1="162" x2="772" y2="368"></line><line x1="705" y1="162" x2="785" y2="368"></line><line x1="718" y1="162" x2="798" y2="368"></line><line x1="731" y1="162" x2="811" y2="368"></line><line x1="744" y1="162" x2="824" y2="368"></line><line x1="757" y1="162" x2="837" y2="368"></line><line x1="770" y1="162" x2="850" y2="368"></line><line x1="783" y1="162" x2="863" y2="368"></line><line x1="796" y1="162" x2="876" y2="368"></line><line x1="809" y1="162" x2="889" y2="368"></line><line x1="822" y1="162" x2="902" y2="368"></line><line x1="835" y1="162" x2="915" y2="368"></line><line x1="848" y1="162" x2="928" y2="368"></line><line x1="861" y1="162" x2="941" y2="368"></line><line x1="874" y1="162" x2="954" y2="368"></line><line x1="887" y1="162" x2="967" y2="368"></line><line x1="900" y1="162" x2="980" y2="368"></line><line x1="913" y1="162" x2="993" y2="368"></line><line x1="926" y1="162" x2="1006" y2="368"></line><line x1="939" y1="162" x2="1019" y2="368"></line><line x1="952" y1="162" x2="1032" y2="368"></line><line x1="965" y1="162" x2="1045" y2="368"></line><line x1="978" y1="162" x2="1058" y2="368"></line><line x1="991" y1="162" x2="1071" y2="368"></line><line x1="1004" y1="162" x2="1084" y2="368"></line><line x1="1017" y1="162" x2="1097" y2="368"></line><line x1="1030" y1="162" x2="1110" y2="368"></line><line x1="1043" y1="162" x2="1123" y2="368"></line><line x1="1056" y1="162" x2="1136" y2="368"></line><line x1="1069" y1="162" x2="1149" y2="368"></line></g></g><line x1="96" y1="738" x2="1104" y2="738" stroke="rgba(238,233,221,0.3)" stroke-width="1.4"></line></svg>
+          <h3>Hospitality &amp; Lifestyle</h3>
+          <p>We have built and scaled hospitality platforms from single properties to multi-country operations. Our experience covers brand development, operator negotiations and expansion sequencing for founder-led hospitality and lifestyle businesses.</p>
+        </div>
+        <div class="col-item ruled r d1">
+          <svg class="col-plate" viewBox="0 0 1200 900" role="img" aria-label="Line drawing of a city block plan"><defs><linearGradient id="gC" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16294a"></stop><stop offset=".55" stop-color="#0d1f3a"></stop><stop offset="1" stop-color="#0a1830"></stop></linearGradient></defs><rect width="100%" height="100%" fill="url(#gC)"></rect><defs><clipPath id="planClip"><rect x="350" y="300" width="410" height="330"></rect></clipPath></defs><rect class="blk" pathLength="1" style="animation-delay:0.00s" x="90" y="110" width="300" height="220" fill="none" stroke="#eee9dd" stroke-opacity="0.35" stroke-width="1.3"></rect><rect x="108" y="128" width="264" height="184" fill="none" stroke="rgba(238,233,221,0.15)" stroke-width="1"></rect><rect class="blk" pathLength="1" style="animation-delay:0.55s" x="430" y="110" width="330" height="150" fill="none" stroke="#eee9dd" stroke-opacity="0.35" stroke-width="1.3"></rect><rect class="blk" pathLength="1" style="animation-delay:1.10s" x="800" y="110" width="310" height="300" fill="none" stroke="#eee9dd" stroke-opacity="0.35" stroke-width="1.3"></rect><rect class="blk" pathLength="1" style="animation-delay:1.65s" x="90" y="370" width="220" height="260" fill="none" stroke="#eee9dd" stroke-opacity="0.35" stroke-width="1.3"></rect><rect x="108" y="388" width="184" height="224" fill="none" stroke="rgba(238,233,221,0.15)" stroke-width="1"></rect><rect x="350" y="300" width="410" height="330" fill="none" stroke="rgba(201,162,94,0.9)" stroke-width="1.8"></rect><rect class="blk" pathLength="1" style="animation-delay:2.20s" x="800" y="450" width="310" height="180" fill="none" stroke="#eee9dd" stroke-opacity="0.35" stroke-width="1.3"></rect><rect class="blk" pathLength="1" style="animation-delay:2.75s" x="90" y="670" width="340" height="140" fill="none" stroke="#eee9dd" stroke-opacity="0.35" stroke-width="1.3"></rect><rect x="108" y="688" width="304" height="104" fill="none" stroke="rgba(238,233,221,0.15)" stroke-width="1"></rect><rect class="blk" pathLength="1" style="animation-delay:3.30s" x="470" y="670" width="290" height="140" fill="none" stroke="#eee9dd" stroke-opacity="0.35" stroke-width="1.3"></rect><rect class="blk" pathLength="1" style="animation-delay:3.85s" x="800" y="670" width="310" height="140" fill="none" stroke="#eee9dd" stroke-opacity="0.35" stroke-width="1.3"></rect><g clip-path="url(#planClip)"><g class="hatch" stroke="rgba(201,162,94,0.35)" stroke-width="1"><line x1="7" y1="300" x2="337" y2="630"></line><line x1="20" y1="300" x2="350" y2="630"></line><line x1="33" y1="300" x2="363" y2="630"></line><line x1="46" y1="300" x2="376" y2="630"></line><line x1="59" y1="300" x2="389" y2="630"></line><line x1="72" y1="300" x2="402" y2="630"></line><line x1="85" y1="300" x2="415" y2="630"></line><line x1="98" y1="300" x2="428" y2="630"></line><line x1="111" y1="300" x2="441" y2="630"></line><line x1="124" y1="300" x2="454" y2="630"></line><line x1="137" y1="300" x2="467" y2="630"></line><line x1="150" y1="300" x2="480" y2="630"></line><line x1="163" y1="300" x2="493" y2="630"></line><line x1="176" y1="300" x2="506" y2="630"></line><line x1="189" y1="300" x2="519" y2="630"></line><line x1="202" y1="300" x2="532" y2="630"></line><line x1="215" y1="300" x2="545" y2="630"></line><line x1="228" y1="300" x2="558" y2="630"></line><line x1="241" y1="300" x2="571" y2="630"></line><line x1="254" y1="300" x2="584" y2="630"></line><line x1="267" y1="300" x2="597" y2="630"></line><line x1="280" y1="300" x2="610" y2="630"></line><line x1="293" y1="300" x2="623" y2="630"></line><line x1="306" y1="300" x2="636" y2="630"></line><line x1="319" y1="300" x2="649" y2="630"></line><line x1="332" y1="300" x2="662" y2="630"></line><line x1="345" y1="300" x2="675" y2="630"></line><line x1="358" y1="300" x2="688" y2="630"></line><line x1="371" y1="300" x2="701" y2="630"></line><line x1="384" y1="300" x2="714" y2="630"></line><line x1="397" y1="300" x2="727" y2="630"></line><line x1="410" y1="300" x2="740" y2="630"></line><line x1="423" y1="300" x2="753" y2="630"></line><line x1="436" y1="300" x2="766" y2="630"></line><line x1="449" y1="300" x2="779" y2="630"></line><line x1="462" y1="300" x2="792" y2="630"></line><line x1="475" y1="300" x2="805" y2="630"></line><line x1="488" y1="300" x2="818" y2="630"></line><line x1="501" y1="300" x2="831" y2="630"></line><line x1="514" y1="300" x2="844" y2="630"></line><line x1="527" y1="300" x2="857" y2="630"></line><line x1="540" y1="300" x2="870" y2="630"></line><line x1="553" y1="300" x2="883" y2="630"></line><line x1="566" y1="300" x2="896" y2="630"></line><line x1="579" y1="300" x2="909" y2="630"></line><line x1="592" y1="300" x2="922" y2="630"></line><line x1="605" y1="300" x2="935" y2="630"></line><line x1="618" y1="300" x2="948" y2="630"></line><line x1="631" y1="300" x2="961" y2="630"></line><line x1="644" y1="300" x2="974" y2="630"></line><line x1="657" y1="300" x2="987" y2="630"></line><line x1="670" y1="300" x2="1000" y2="630"></line><line x1="683" y1="300" x2="1013" y2="630"></line><line x1="696" y1="300" x2="1026" y2="630"></line><line x1="709" y1="300" x2="1039" y2="630"></line><line x1="722" y1="300" x2="1052" y2="630"></line><line x1="735" y1="300" x2="1065" y2="630"></line><line x1="748" y1="300" x2="1078" y2="630"></line></g></g></svg>
+          <h3>Real Estate &amp; Development</h3>
+          <p>We advise on development pipelines, site selection and capital structuring for real estate ventures. Our work spans market entry, joint venture negotiation and asset positioning across multiple regions.</p>
+        </div>
+        <div class="col-item ruled r d2">
+          <svg class="col-plate" viewBox="0 0 1200 900" role="img" aria-label="Line drawing of a faceted rosette"><g></g><defs><linearGradient id="gD" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16294a"></stop><stop offset=".55" stop-color="#0d1f3a"></stop><stop offset="1" stop-color="#0a1830"></stop></linearGradient></defs><rect width="100%" height="100%" fill="url(#gD)"></rect><g class="rosette-g"><polygon points="930.0,450.0 833.3,683.3 600.0,780.0 366.7,683.3 270.0,450.0 366.7,216.7 600.0,120.0 833.3,216.7" fill="none" stroke="rgba(238,233,221,0.18)" stroke-width="1.3" stroke-linejoin="round"></polygon><polygon points="842.1,550.3 700.3,692.1 499.7,692.1 357.9,550.3 357.9,349.7 499.7,207.9 700.3,207.9 842.1,349.7" fill="none" stroke="rgba(238,233,221,0.25)" stroke-width="1.3" stroke-linejoin="round"></polygon><polygon points="796.0,450.0 738.6,588.6 600.0,646.0 461.4,588.6 404.0,450.0 461.4,311.4 600.0,254.0 738.6,311.4" fill="none" stroke="rgba(238,233,221,0.32)" stroke-width="1.3" stroke-linejoin="round"></polygon><polygon points="722.0,500.5 650.5,572.0 549.5,572.0 478.0,500.5 478.0,399.5 549.5,328.0 650.5,328.0 722.0,399.5" fill="none" stroke="rgba(201,162,94,0.85)" stroke-width="1.8" stroke-linejoin="round"></polygon><polygon points="672.0,450.0 650.9,500.9 600.0,522.0 549.1,500.9 528.0,450.0 549.1,399.1 600.0,378.0 650.9,399.1" fill="none" stroke="rgba(238,233,221,0.46)" stroke-width="1.3" stroke-linejoin="round"></polygon><g stroke="rgba(238,233,221,0.15)" stroke-width="1"><line x1="930.0" y1="450.0" x2="842.1" y2="550.3"></line><line x1="930.0" y1="450.0" x2="842.1" y2="349.7"></line><line x1="833.3" y1="683.3" x2="700.3" y2="692.1"></line><line x1="833.3" y1="683.3" x2="842.1" y2="550.3"></line><line x1="600.0" y1="780.0" x2="499.7" y2="692.1"></line><line x1="600.0" y1="780.0" x2="700.3" y2="692.1"></line><line x1="366.7" y1="683.3" x2="357.9" y2="550.3"></line><line x1="366.7" y1="683.3" x2="499.7" y2="692.1"></line><line x1="270.0" y1="450.0" x2="357.9" y2="349.7"></line><line x1="270.0" y1="450.0" x2="357.9" y2="550.3"></line><line x1="366.7" y1="216.7" x2="499.7" y2="207.9"></line><line x1="366.7" y1="216.7" x2="357.9" y2="349.7"></line><line x1="600.0" y1="120.0" x2="700.3" y2="207.9"></line><line x1="600.0" y1="120.0" x2="499.7" y2="207.9"></line><line x1="833.3" y1="216.7" x2="842.1" y2="349.7"></line><line x1="833.3" y1="216.7" x2="700.3" y2="207.9"></line><line x1="842.1" y1="550.3" x2="796.0" y2="450.0"></line><line x1="842.1" y1="550.3" x2="738.6" y2="311.4"></line><line x1="700.3" y1="692.1" x2="738.6" y2="588.6"></line><line x1="700.3" y1="692.1" x2="796.0" y2="450.0"></line><line x1="499.7" y1="692.1" x2="600.0" y2="646.0"></line><line x1="499.7" y1="692.1" x2="738.6" y2="588.6"></line><line x1="357.9" y1="550.3" x2="461.4" y2="588.6"></line><line x1="357.9" y1="550.3" x2="600.0" y2="646.0"></line><line x1="357.9" y1="349.7" x2="404.0" y2="450.0"></line><line x1="357.9" y1="349.7" x2="461.4" y2="588.6"></line><line x1="499.7" y1="207.9" x2="461.4" y2="311.4"></line><line x1="499.7" y1="207.9" x2="404.0" y2="450.0"></line><line x1="700.3" y1="207.9" x2="600.0" y2="254.0"></line><line x1="700.3" y1="207.9" x2="461.4" y2="311.4"></line><line x1="842.1" y1="349.7" x2="738.6" y2="311.4"></line><line x1="842.1" y1="349.7" x2="600.0" y2="254.0"></line><line x1="796.0" y1="450.0" x2="722.0" y2="500.5"></line><line x1="796.0" y1="450.0" x2="722.0" y2="399.5"></line><line x1="738.6" y1="588.6" x2="650.5" y2="572.0"></line><line x1="738.6" y1="588.6" x2="722.0" y2="500.5"></line><line x1="600.0" y1="646.0" x2="549.5" y2="572.0"></line><line x1="600.0" y1="646.0" x2="650.5" y2="572.0"></line><line x1="461.4" y1="588.6" x2="478.0" y2="500.5"></line><line x1="461.4" y1="588.6" x2="549.5" y2="572.0"></line><line x1="404.0" y1="450.0" x2="478.0" y2="399.5"></line><line x1="404.0" y1="450.0" x2="478.0" y2="500.5"></line><line x1="461.4" y1="311.4" x2="549.5" y2="328.0"></line><line x1="461.4" y1="311.4" x2="478.0" y2="399.5"></line><line x1="600.0" y1="254.0" x2="650.5" y2="328.0"></line><line x1="600.0" y1="254.0" x2="549.5" y2="328.0"></line><line x1="738.6" y1="311.4" x2="722.0" y2="399.5"></line><line x1="738.6" y1="311.4" x2="650.5" y2="328.0"></line><line x1="722.0" y1="500.5" x2="672.0" y2="450.0"></line><line x1="722.0" y1="500.5" x2="650.9" y2="399.1"></line><line x1="650.5" y1="572.0" x2="650.9" y2="500.9"></line><line x1="650.5" y1="572.0" x2="672.0" y2="450.0"></line><line x1="549.5" y1="572.0" x2="600.0" y2="522.0"></line><line x1="549.5" y1="572.0" x2="650.9" y2="500.9"></line><line x1="478.0" y1="500.5" x2="549.1" y2="500.9"></line><line x1="478.0" y1="500.5" x2="600.0" y2="522.0"></line><line x1="478.0" y1="399.5" x2="528.0" y2="450.0"></line><line x1="478.0" y1="399.5" x2="549.1" y2="500.9"></line><line x1="549.5" y1="328.0" x2="549.1" y2="399.1"></line><line x1="549.5" y1="328.0" x2="528.0" y2="450.0"></line><line x1="650.5" y1="328.0" x2="600.0" y2="378.0"></line><line x1="650.5" y1="328.0" x2="549.1" y2="399.1"></line><line x1="722.0" y1="399.5" x2="650.9" y2="399.1"></line><line x1="722.0" y1="399.5" x2="600.0" y2="378.0"></line></g></g></svg>
+          <h3>Founder-Led Brands</h3>
+          <p>We work with founders making the shift from personal vision to institutional ownership. Our focus is governance, capital structure and operational systems that preserve what made the brand distinctive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="r">How we work</h2>
+        <p class="section-intro r d1">Three principles guide how we work with every client.</p>
+      </div>
+
+      <div class="col-grid">
+        <div class="col-item on-paper r">
+          <hr class="rule32">
+          <h3>Principal Mindset</h3>
+          <p>We advise as though the capital and the outcome were our own. Recommendations reflect what we would do as owners, weighed against real risk rather than easy presentation.</p>
+        </div>
+        <div class="col-item on-paper r d1">
+          <hr class="rule32">
+          <h3>Global Perspective</h3>
+          <p>Our work spans the United States, United Kingdom, Europe and the Middle East. We understand how capital, regulation and consumer behaviour differ by region, and we plan accordingly.</p>
+        </div>
+        <div class="col-item on-paper r d2">
+          <hr class="rule32">
+          <h3>Operator Experience</h3>
+          <p>We have run businesses ourselves rather than studying them from outside. Our advice reflects the realities of hiring, opening venues and managing boards, drawn from direct operating roles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <svg class="contact-gem" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="22,32 34,20 66,20 78,32 78,68 66,80 34,80 22,68"></polygon><polygon points="33.76,39.56 40.72,32.6 59.28,32.6 66.24,39.56 66.24,60.44 59.28,67.4 40.72,67.4 33.76,60.44"></polygon><path d="M22 32l11.76 7.56M34 20l6.72 12.6M66 20l-6.72 12.6M78 32l-11.76 7.56M78 68l-11.76-7.56M66 80l-6.72-12.6M34 80l6.72-12.6M22 68l11.76-7.56"></path></svg>
+    <div class="wrap contact-block">
+      <div class="section-head">
+        <h2 class="r">Speak with our team</h2>
+      </div>
+      <p class="r">We take on a limited number of mandates each year. To discuss a potential engagement, contact us directly.</p>
+      <a href="mailto:info@sapir.group" class="contact-email r d1">info@sapir.group</a>
+      <div class="contact-location r d2">London, United Kingdom</div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <svg class="gem" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="22,32 34,20 66,20 78,32 78,68 66,80 34,80 22,68"></polygon><polygon points="33.76,39.56 40.72,32.6 59.28,32.6 66.24,39.56 66.24,60.44 59.28,67.4 40.72,67.4 33.76,60.44"></polygon><path d="M22 32l11.76 7.56M34 20l6.72 12.6M66 20l-6.72 12.6M78 32l-11.76 7.56M78 68l-11.76-7.56M66 80l-6.72-12.6M34 80l6.72-12.6M22 68l11.76-7.56"></path></svg>
+      <span>Sapir Group</span>
+    </div>
+    <div class="footer-time" id="ldnTime"></div>
+    <div class="footer-line">© 2026 Sapir Group. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Nav scrolled state */
+  var nav = document.getElementById("siteNav");
+  function onScroll(){
+    if(window.scrollY > 40){
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  }
+  onScroll();
+  window.addEventListener("scroll", onScroll, {passive:true});
+
+  /* Mobile menu */
+  var hamburger = document.getElementById("hamburgerBtn");
+  var overlay = document.getElementById("mobileMenu");
+  function openMenu(){
+    overlay.classList.add("open");
+    hamburger.setAttribute("aria-expanded","true");
+    hamburger.setAttribute("aria-label","Close menu");
+  }
+  function closeMenu(){
+    overlay.classList.remove("open");
+    hamburger.setAttribute("aria-expanded","false");
+    hamburger.setAttribute("aria-label","Open menu");
+  }
+  hamburger.addEventListener("click", function(){
+    if(overlay.classList.contains("open")){closeMenu();}else{openMenu();}
+  });
+  var overlayLinks = overlay.querySelectorAll("a");
+  for(var i=0;i<overlayLinks.length;i++){
+    overlayLinks[i].addEventListener("click", closeMenu);
+  }
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape" && overlay.classList.contains("open")){closeMenu();}
+  });
+
+  /* Scroll reveals */
+  var revealEls = document.querySelectorAll(".r");
+  if(reduceMotion || !("IntersectionObserver" in window)){
+    for(var j=0;j<revealEls.length;j++){revealEls[j].classList.add("visible");}
+  } else {
+    var io = new IntersectionObserver(function(entries, observer){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:"0px 0px -8% 0px"});
+    for(var k=0;k<revealEls.length;k++){io.observe(revealEls[k]);}
+  }
+
+  /* Headline word choreography */
+  var headline = document.getElementById("headline");
+  if(headline && !reduceMotion){
+    var words = headline.textContent.split(" ");
+    headline.textContent = "";
+    for(var w=0;w<words.length;w++){
+      var outer = document.createElement("span");
+      outer.className = "w";
+      var inner = document.createElement("span");
+      inner.textContent = words[w];
+      inner.style.animationDelay = (0.15 + w*0.07) + "s";
+      outer.appendChild(inner);
+      headline.appendChild(outer);
+      if(w < words.length-1){headline.appendChild(document.createTextNode(" "));}
+    }
+  }
+
+  /* Scroll progress */
+  var bar = document.getElementById("progressBar");
+  if(bar){
+    var progTick = false;
+    var setProg = function(){
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (max>0 ? (window.scrollY/max)*100 : 0) + "%";
+      progTick = false;
+    };
+    setProg();
+    window.addEventListener("scroll", function(){
+      if(!progTick){progTick = true; requestAnimationFrame(setProg);}
+    }, {passive:true});
+  }
+
+  /* Stat count-up */
+  function runCount(el){
+    var target = parseInt(el.getAttribute("data-count"),10);
+    var pre = el.getAttribute("data-prefix")||"";
+    var suf = el.getAttribute("data-suffix")||"";
+    var t0 = null;
+    function stepNum(ts){
+      if(t0===null){t0=ts;}
+      var p = Math.min((ts-t0)/1400,1);
+      var ease = 1-Math.pow(1-p,3);
+      el.textContent = pre + Math.round(target*ease) + suf;
+      if(p<1){requestAnimationFrame(stepNum);}
+    }
+    requestAnimationFrame(stepNum);
+  }
+  var counters = document.querySelectorAll(".stat-number[data-count]");
+  if(counters.length && !reduceMotion && "IntersectionObserver" in window){
+    var nio = new IntersectionObserver(function(entries,obs){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          runCount(entry.target);
+          obs.unobserve(entry.target);
+        }
+      });
+    },{threshold:.6});
+    for(var c1=0;c1<counters.length;c1++){nio.observe(counters[c1]);}
+  }
+
+  /* Active nav link */
+  var secIds = ["about","services","sectors","approach","contact"];
+  if("IntersectionObserver" in window){
+    var sio = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          for(var q=0;q<secIds.length;q++){
+            var lnk = document.querySelector('.nav-links a[href="#'+secIds[q]+'"]');
+            if(lnk){lnk.classList.toggle("active", secIds[q]===entry.target.id);}
+          }
+        }
+      });
+    },{rootMargin:"-45% 0px -50% 0px"});
+    for(var s1=0;s1<secIds.length;s1++){
+      var secEl = document.getElementById(secIds[s1]);
+      if(secEl){sio.observe(secEl);}
+    }
+  }
+
+  /* London clock */
+  var clockEl = document.getElementById("ldnTime");
+  if(clockEl){
+    var setClock = function(){
+      try{
+        clockEl.textContent = "London "+new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/London",hour:"2-digit",minute:"2-digit"}).format(new Date());
+      }catch(err){clockEl.textContent = "London";}
+    };
+    setClock();
+    setInterval(setClock,30000);
+  }
+
+})();
+</script>
+
+
+
+</body></html>

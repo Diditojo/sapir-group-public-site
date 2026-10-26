@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /Projects/
+
+Sitemap: https://sapir.group/sitemap.xml
